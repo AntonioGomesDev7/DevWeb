@@ -1,0 +1,128 @@
+Principais métodos de array em Javascript
+
+Arrays são uma parte essencial de qualquer linguagem de programação e JavaScript não é exceção. Com arrays, os desenvolvedores podem armazenar e manipular coleções de dados, incluindo strings, números e até objetos.
+
+Vamos ver agora os principais métodos de array JavaScript obrigatórios que todos deveriam conhecer.
+
+push() – Adiciona um ou mais elementos ao final de um array.
+O método push() adiciona um ou mais elementos ao final de um array e retorna o novo comprimento do array. Este método é útil quando você precisa adicionar elementos a um array sem especificar o índice.
+
+const array = [1, 2, 3];  
+array.push(4, 5);  
+console.log(array); 
+// Saída: [1, 2, 3, 4, 5]
+pop() – Remove e retorna o último elemento de um array.
+O método pop() remove e retorna o último elemento de um array. Este método é útil quando você precisa remover um elemento do final de um array.
+
+const array = [1, 2, 3];
+const lastElement = array.pop();
+console.log(array); 
+// Saída: [1, 2]
+console.log(lastElement); 
+// Saída: 3
+shift() – Remove e retorna o primeiro elemento de um array
+O método shift() remove e retorna o primeiro elemento de um array. Este método é útil quando você precisa remover um elemento do início de um array.
+
+const array = [1, 2, 3];
+const firstElement = array.shift();
+console.log(array); 
+// Saída: [2, 3]
+console.log(firstElement); 
+// Saída: 1
+unshift() – Adiciona um ou mais elementos ao início de um array
+O método unshift() adiciona um ou mais elementos ao início de um array e retorna o novo comprimento do array. Este método é útil quando você precisa adicionar elementos a um array no início.
+
+const array = [1, 2, 3];
+array.unshift(4, 5);
+console.log(array); 
+// Saída: [4, 5, 1, 2, 3]
+splice() – Adiciona ou remove elementos de um array em um índice especificado
+O método splice() adiciona e remove elementos de um array em um índice especificado. Este método pode ser usado para adicionar ou remover elementos de qualquer lugar do array.
+
+Sintaxe: Array.splice(inicio, removeCount, novoItem, novoItem, novoItem, …)
+
+const array = [1, 2, 3, 4];
+array.splice(1, 2, 5, 6);
+console.log(array); 
+// Saída: [1, 5, 6, 4]
+slice() – Retorna uma cópia de uma parte de um array especificado por seus índices inicial e final
+O método slice() retorna uma cópia de uma parte de um array especificado por seus índices inicial e final. Este método pode ser usado para criar um novo array que contém um subconjunto do array original.
+
+const array = [1, 2, 3, 4];
+const newArray = array.slice(1, 3);
+console.log(newArray); 
+// Saída: [2, 3]
+concat() – Combina dois ou mais arrays e retorna um novo array
+O método concat() combina dois ou mais arrays e retorna um novo array. Este método pode ser usado para unir arrays sem modificar os arrays originais.
+
+const array1 = [1, 2];
+const array2 = [3, 4];
+const newArray = array1.concat(array2);
+console.log(newArray); 
+// Saída: [1, 2, 3, 4]
+join() – Une todos os elementos de um array em uma string
+O método join() une todos os elementos de um array em uma string, usando um separador especificado. Este método pode ser usado para criar uma string a partir de um array.
+
+const array = [1, 2, 3];  
+const string = array.join("-");  
+console.log(string); 
+// Saída: "1-2-3"
+indexOf() – Retorna o índice da primeira ocorrência de um elemento especificado em um array
+O método indexOf() retorna o índice da primeira ocorrência de um elemento especificado em um array. Se o elemento não for encontrado, este método retornará -1.
+
+const array = [1, 2, 3];  
+const index = array.indexOf(2);  
+console.log(index); 
+// Saída: 1
+lastIndexOf() – Retorna o índice da última ocorrência de um elemento especificado em um array
+O método lastIndexOf() retorna o índice da última ocorrência de um elemento especificado no array. Se o elemento não for encontrado, este método retornará -1.
+
+const array = [1, 2, 3, 2];  
+const index = array.lastIndexOf(2);  
+console.log(index); 
+// Saída: 3
+forEach() – Executa uma função fornecida uma vez para cada elemento em um array
+O método forEach() executa uma função fornecida uma vez para cada elemento em um array. Este método pode ser usado para realizar uma operação em cada elemento de um array.
+
+const array = [1, 2, 3];  
+array.forEach((element) => {  
+   console.log(element);  
+});  
+// Saída:  
+// 1  
+// 2  
+// 3
+map() – Cria um novo array com os resultados da chamada de uma função fornecida em cada elemento do array
+O método map() cria um novo array com os resultados da chamada de uma função fornecida em cada elemento do array. Este método pode ser usado para criar um novo array baseado no array original.
+
+const array = [1, 2, 3];  
+const newArray = array.map((element) => {  
+   return element * 2;  
+});  
+console.log(newArray); 
+// Saída: [2, 4, 6]
+filter() – Cria um novo array com todos os elementos que passam em um teste especificado por uma função fornecida
+O método filter() cria um novo array com todos os elementos que passam em um teste especificado por uma função fornecida. Este método pode ser usado para criar um novo array baseado em uma condição.
+
+const array = [1, 2, 3];  
+const newArray = array.filter((element) => {  
+   return element > 1;  
+});  
+console.log(newArray); 
+// Saída: [2, 3]
+reduce() – Executa uma função fornecida em cada elemento do array e retorna um único valor
+O método reduce() executa uma função fornecida em cada elemento do array e retorna um único valor. Este método pode ser usado para realizar uma operação em todos os elementos de um array e retornar um único valor.
+
+const array = [1, 2, 3];  
+const sum = array.reduce((accumulator, currentValue) => {  
+   return accumulator + currentValue;  
+}, 0);  
+console.log(sum); 
+// Saída: 6
+sort() – Classifica os elementos de um array no lugar
+O método sort() classifica os elementos de um array no lugar. Este método pode ser usado para classificar um array em ordem crescente ou decrescente.
+
+const array = [3, 2, 1];
+array.sort();
+console.log(array); 
+// Saída: [1, 2, 3]
