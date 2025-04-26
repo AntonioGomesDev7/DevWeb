@@ -5,3 +5,8 @@ h1 {
 body{
     margin-bottom: 1000px;
 }
+
+#btn-container {
+    padding: 40px;
+    background-color: tomato;
+}
